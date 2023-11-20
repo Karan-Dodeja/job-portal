@@ -3,7 +3,7 @@ import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import CompLogo from "../../assets/search.png";
-import Button from '@mui/material/Button';
+import Button from "@mui/material/Button";
 
 export default function JobPosting() {
   return (
@@ -35,12 +35,20 @@ export default function JobPosting() {
                 Google LLC
               </Typography>
               <Typography variant="body2" gutterBottom>
-                Salary: Not Disclosed
+                Salary: $14,000-25,000
               </Typography>
             </Grid>
           </Grid>
-          <Grid><Button variant="outlined">APPLY</Button></Grid>
+          <Grid>
+            <Button variant="outlined">APPLY</Button>
+          </Grid>
         </Grid>
+      </Grid>
+      <Grid>
+        <div styles={{ display: "flex", justifyContent: "space-between" }}>
+          <div>Text</div>
+          <div>Text</div>
+        </div>
       </Grid>
     </Paper>
   );

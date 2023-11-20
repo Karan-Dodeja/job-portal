@@ -13,6 +13,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link, Outlet } from "react-router-dom";
+import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
@@ -34,48 +35,60 @@ export default function Sidebar(props: Props) {
       <Divider />
       <List>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>
-              <Link to="/">Home</Link>
-            </ListItemText>
-          </ListItemButton>
+          <Link to="/">
+            <ListItemButton>
+              <ListItemText>Home</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>
-              <Link to="/job">Jobs</Link>
-            </ListItemText>
-          </ListItemButton>
+          <Link to="/job">
+            <ListItemButton>
+              <ListItemText>Jobs</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>Companies</ListItemText>
-          </ListItemButton>
+          <Link to="/companies">
+            <ListItemButton>
+              <ListItemText>Companies</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>Profiles</ListItemText>
-          </ListItemButton>
+          <Link to="/companies">
+            <ListItemButton>
+              <ListItemText>Profiles</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>Messages</ListItemText>
-          </ListItemButton>
+          <Link to="/companies">
+            <ListItemButton>
+              <ListItemText>Messages</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>Saved Items</ListItemText>
-          </ListItemButton>
+          <Link to="/companies">
+            <ListItemButton>
+              <ListItemText>Saved Items</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>Settings</ListItemText>
-          </ListItemButton>
+          <Link to="/companies">
+            <ListItemButton>
+              <ListItemText>Settings</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
         <ListItem>
-          <ListItemButton>
-            <ListItemText>Help & Support</ListItemText>
-          </ListItemButton>
+          <Link to="/companies">
+            <ListItemButton>
+              <ListItemText>Help & Support</ListItemText>
+            </ListItemButton>
+          </Link>
         </ListItem>
       </List>
       {/* <Divider /> */}
@@ -95,7 +108,7 @@ export default function Sidebar(props: Props) {
           ml: { sm: `${drawerWidth}px` },
         }}
       >
-        <Toolbar>
+        <Toolbar style={{ display: "flex", justifyContent: "space-between" }}>
           <IconButton
             color="inherit"
             aria-label="open drawer"
@@ -108,6 +121,14 @@ export default function Sidebar(props: Props) {
           <Typography variant="h6" noWrap component="div">
             Welcome
           </Typography>
+          <div>
+            <Button
+              variant="outlined"
+              style={{ color: "white", border: "white 1px solid" }}
+            >
+              Sign In
+            </Button>
+          </div>
         </Toolbar>
       </AppBar>
       <Box
