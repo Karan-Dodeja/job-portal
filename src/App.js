@@ -5,6 +5,8 @@ import Homepage from "./components/Homepage/Homepage.jsx";
 import JobPosting from "./components/Jobs Posting/JobsPosting.jsx";
 import Auth from "./components/Auth/Auth.jsx";
 import Companies from "./components/Companies/Companies.js";
+import ForgotPassword from "./components/forgot-password/forgot-password.jsx";
+import ConfirmCode from "./components/forgot-password/confirm-code.jsx";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
           <Route index element={<Homepage />} />
           <Route path="/job" element={<JobPosting />} />
           <Route path="/auth" element={<Auth />} />
+          <Route path="/fp" element={<ForgotPassword />} />
+          <Route path="/cc" element={<ConfirmCode />} />
           <Route path="/companies" element={<Companies />} />
           <Route path="/profile" element={<Auth />} />
           <Route path="/messages" element={<Auth />} />

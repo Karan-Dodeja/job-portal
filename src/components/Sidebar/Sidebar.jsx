@@ -13,7 +13,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Toolbar from "@mui/material/Toolbar";
 import Typography from "@mui/material/Typography";
 import { Link, Outlet } from "react-router-dom";
-import Button from "@mui/material/Button";
 
 const drawerWidth = 240;
 
@@ -122,12 +121,13 @@ export default function Sidebar(props: Props) {
             Welcome
           </Typography>
           <div>
-            <Button
+            <Link
+              to="/auth"
               variant="outlined"
               style={{ color: "white", border: "white 1px solid" }}
             >
               Sign In
-            </Button>
+            </Link>
           </div>
         </Toolbar>
       </AppBar>
